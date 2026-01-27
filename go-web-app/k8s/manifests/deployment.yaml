@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: x-go-web-app
+  labels:
+    app: x-go-web-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: x-go-web-app
+  template:
+    metadata:
+      labels:
+        app: x-go-web-app
+    spec:
+      containers:
+      - name: x-go-web-app
+        image: faizanalix/x-go-web-app:v1
+        ports:
+        - containerPort: 8080

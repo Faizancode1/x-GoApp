@@ -26,7 +26,7 @@ jobs:
       run: go build -o x-go-web-app   
 
     - name: test 
-      run: go test./...
+      run: go test ./...
 
 
   code-quality:

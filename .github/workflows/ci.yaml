@@ -26,6 +26,7 @@ jobs:
       run: go build -o x-go-web-app   
 
     - name: test 
+      working-directory: go-web-app
       run: go test ./...
 
 
